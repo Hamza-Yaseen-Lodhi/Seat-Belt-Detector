@@ -1,0 +1,10 @@
+tensorflow
+keras
+numpy
+pillow
+opencv-python
+gradio
+flask
+fastapi
+uvicorn
+python-multipart

@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #1f2933;
+}
+
+.main-wrapper {
+    max-width: 1050px;
+    margin: 45px auto;
+    padding: 20px;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #12372a, #1f6f4a);
+    color: white;
+    padding: 35px;
+    border-radius: 18px;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.hero-section h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+}
+
+.hero-section p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.upload-card,
+.result-card {
+    background: white;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    min-height: 300px;
+}
+
+.upload-card h2,
+.result-card h2 {
+    margin-top: 0;
+    color: #12372a;
+}
+
+.small-text {
+    color: #6b7280;
+    margin-bottom: 22px;
+}
+
+.upload-box {
+    display: block;
+    border: 2px dashed #1f6f4a;
+    padding: 35px 20px;
+    border-radius: 14px;
+    text-align: center;
+    color: #1f6f4a;
+    font-weight: bold;
+    cursor: pointer;
+    background: #f7fbf8;
+    margin-bottom: 22px;
+}
+
+.upload-box:hover {
+    background: #eef8f0;
+}
+
+.predict-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #1f6f4a;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.predict-btn:hover {
+    background: #145236;
+}
+
+.prediction-box {
+    background: #f7fbf8;
+    border-left: 6px solid #1f6f4a;
+    padding: 25px;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+
+.label {
+    color: #6b7280;
+    margin: 0 0 8px;
+}
+
+.safe {
+    color: #16803c;
+    font-size: 34px;
+    margin: 0;
+}
+
+.danger {
+    color: #d62828;
+    font-size: 34px;
+    margin: 0;
+}
+
+.confidence {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #374151;
+}
+
+.empty-result {
+    color: #6b7280;
+    background: #f9fafb;
+    padding: 25px;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+
+.footer-note {
+    text-align: center;
+    margin-top: 30px;
+    color: #6b7280;
+    font-size: 14px;
+}

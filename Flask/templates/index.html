@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seat Belt Detection Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="main-wrapper">
+
+    <div class="hero-section">
+        <h1>Seat Belt Detection Web App</h1>
+        <p>
+            A custom Flask-based web interface for detecting whether a driver or passenger
+            is wearing a seat belt using a CNN image classification model.
+        </p>
+    </div>
+
+    <div class="content-grid">
+
+        <div class="upload-card">
+            <h2>Upload Image</h2>
+            <p class="small-text">Choose a driver or passenger image to run prediction.</p>
+
+            <form method="POST" enctype="multipart/form-data">
+                <label class="upload-box">
+                    <input type="file" name="image" accept="image/*" required hidden>
+                    <span>Upload Driver/Passenger Image</span>
+                </label>
+
+                <button type="submit" class="predict-btn">Run Prediction</button>
+            </form>
+        </div>
+
+        <div class="result-card">
+            <h2>Prediction Result</h2>
+
+            {% if prediction %}
+                <div class="prediction-box">
+                    <p class="label">Predicted Class</p>
+
+                    <h3 class="{{ 'safe' if prediction == 'Seatbelt' else 'danger' }}">
+                        {{ prediction }}
+                    </h3>
+
+                    {% if confidence %}
+                        <p class="confidence">Confidence: {{ confidence }}%</p>
+                    {% endif %}
+                </div>
+            {% else %}
+                <div class="empty-result">
+                    <p>No prediction yet.</p>
+                    <p>Upload an image and click Run Prediction.</p>
+                </div>
+            {% endif %}
+        </div>
+
+    </div>
+
+    <div class="footer-note">
+        Built with Flask, TensorFlow/Keras, and CNN-based image classification.
+    </div>
+
+</div>
+
+</body>
+</html>
